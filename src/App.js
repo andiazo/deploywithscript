@@ -1,9 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
+      {props.name? <h1> Hola {props.name}</h1> : <h1>Hola invitado</h1> }
+      
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -18,6 +20,11 @@ function App() {
           Learn React
         </a>
       </header>
+      <label for="username-input">Username</label>
+      <input id="username-input" />
+      <button>
+        Aplicar
+      </button>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 echo "Testing ..."
 react-scripts test --silent --coverage --watchAll=false
-if [ $? > 0 ]; then 
+if [ $? -eq 0 ]; then 
+    echo $?
     echo "All tests passed"
     echo "Building ..."
     react-scripts build 
